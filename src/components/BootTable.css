@@ -1,0 +1,42 @@
+.searchBar {
+    background: linear-gradient(90deg, rgb(66, 66, 66) 0%,rgb(66, 66, 66) 100%);
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    position: relative;
+    top: 0;
+    z-index: 999;
+    padding: 20px;
+}
+
+.datePicker {
+    background: linear-gradient(90deg, rgb(66, 66, 66) 0%,rgb(66, 66, 66) 100%);
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    position: relative;
+    top: 0;
+    z-index: 999;
+    padding: 10px;
+}
+
+.searchButton {
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    position: sticky;
+    top: 0;
+    padding: 10px;
+}
+
+.table {
+    align-items: center;
+    font-size: 1.1rem;
+    position: relative;
+}
