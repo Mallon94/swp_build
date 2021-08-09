@@ -1,8 +1,8 @@
 import React from 'react';
 import '../../App.css';
-import BootTable from '../BootTable'
+import Schedule from '../Schedule'
 
 export default function Services() {
   return <div>
-    <BootTable /></div>;
+    <Schedule /></div>;
 }

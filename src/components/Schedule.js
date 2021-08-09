@@ -3,10 +3,10 @@ import * as ReactBootStrap from 'react-bootstrap';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import CleanTableDataService from "../services/cleantable";
-import './BootTable.css';
+import './Schedule.css';
 
 
-const BootTable = () => {
+const Schedule = () => {
   
   const [selectedDate,setSelectedDate] = useState(new Date());
   const [rooms, setRooms] = useState ({roomList: []});
@@ -91,4 +91,4 @@ const BootTable = () => {
   );
 };
 
-export default BootTable
+export default Schedule

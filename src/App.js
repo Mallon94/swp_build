@@ -6,12 +6,15 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 //* Components *//
 import Navbar from './components/Navbar';
 import Home from './components/pages/Home';
-import Services from './components/pages/Services';
+import Services from './components/pages/Schedule';
 import RollUp from './components/pages/rollup';
 import RollUp2 from './components/pages/rollup2';
-import SignUp from './components/pages/SignUp';
+import Schedule from './components/pages/Schedule';
 import Portal from './components/pages/Portal';
 import LoginPage from './components/pages/Login';
+import Help from './components/pages/Help';
+import Contact from './components/pages/Contact';
+import Video from './components/pages/Video';
 
 //* Icons & CSS *//
 import './App.css';
@@ -21,13 +24,11 @@ function App() {
     <div className="App">
     <>
       <Router>
-        <Navbar />
         <Switch>
           <Route path='/' exact component={Home} />
-          <Route path='/services' component={Services} />
           <Route path='/rollup' component={RollUp} />
           <Route path='/rollup2' component={RollUp2} />
-          <Route path='/Services' exact component={Services} />
+          <Route path='/Schedule' exact component={Schedule} />
           <Route path='/Portal' component={Portal} />
           <Route path='/Login' exact component={LoginPage} />
           <Route path='/Help' exact component={Help} />

@@ -42,12 +42,12 @@ function PortalNavbar() {
                             </Link>
                         </li>
                         <li className='nav-item'>
-                            <Link to='/services' className='nav-links' onClick={closeMobileMenu}>
+                            <Link to='/schedule' className='nav-links' onClick={closeMobileMenu}>
                                 Schedule
                             </Link>
                         </li>
                         <li className='nav-item'>
-                            <Link to='/products' className='nav-links' onClick={closeMobileMenu}>
+                            <Link to='/rollup' className='nav-links' onClick={closeMobileMenu}>
                                 Roll up
                             </Link>
                         </li>

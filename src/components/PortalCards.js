@@ -5,7 +5,7 @@ import CardItem from './CardItem';
 function PortalCards() {
   return (
     <div className='cards'>
-      <h1>Control *BUSINESSES* Savings</h1>
+      <h1>Control Your Savings</h1>
       <h2>Choose your Service:</h2>
       
       <div className='cards__container'>
@@ -15,13 +15,13 @@ function PortalCards() {
               src='images/time.png'
               text='Cleaning Schedule'
               label='Schedule'
-              path='/services'
+              path='/schedule'
             />
             <CardItem
               src='images/savings.jpg'
               text='Roll Up Analysis'
               label='Analysis'
-              path='/products'
+              path='/rollup'
             />
           </ul>
           <ul className='cards__items'>
