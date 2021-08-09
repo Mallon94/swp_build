@@ -1,0 +1,53 @@
+.body{
+    align-items: center;
+    text-align: center;
+        
+      
+}
+
+.body > h1 {
+    font-size: 50px;
+    color: rgb(0, 0, 0);
+    display: flex;
+    text-align: center;
+    padding-top: -100rem;
+    margin-top: -250px;
+}
+
+.body > h2 {
+    font-size: 25px;
+    color: rgb(2, 7, 2);
+    display: flex;
+    text-align: center;
+}
+
+.QA {
+    margin-top: -20rem;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 10px;
+    list-style: none;
+    text-align: center;
+    width: 60vw;
+    justify-content: end;
+    margin-right: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    max-width: 1500px;
+  }
+
+  .Q{
+    color: crimson;
+    text-align: center;
+
+  }
+
+  .A{
+      color: black;
+      text-align: center;
+
+
+  }
+

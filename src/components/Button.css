@@ -9,6 +9,45 @@
   border: none;
   cursor: pointer;
 }
+.login {
+  padding: 8px 20px;
+  border-radius: 2px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.login--primary {
+  background-color: var(--primary);
+  color: #242424;
+  border: 1px solid var(--primary);
+}
+
+.login--outline {
+  background-color: transparent;
+  color: #fff;
+  padding: 8px 20px;
+  border: 1px solid var(--primary);
+  transition: all 0.3s ease-out;
+}
+
+.login--medium {
+  padding: 8px 20px;
+  font-size: 18px;
+}
+
+.login--large {
+  padding: 12px 26px;
+  font-size: 20px;
+}
+
+.login--large:hover,
+.login--medium:hover {
+  transition: all 0.3s ease-out;
+  background: #fff;
+  color: #242424;
+  transition: 250ms;
+}
 
 .btn--primary {
   background-color: var(--primary);
