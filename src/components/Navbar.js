@@ -46,8 +46,8 @@ function Navbar() {
                             </Link>
                         </li>
                         <li className='nav-item'>
-                            <Link to='/products' className='nav-links' onClick={closeMobileMenu}>
-                                Products
+                            <Link to='/rollup' className='nav-links' onClick={closeMobileMenu}>
+                                Roll-Up
                             </Link>
                         </li>
                         <li className='nav-item'>
