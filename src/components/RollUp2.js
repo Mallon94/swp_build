@@ -22,9 +22,9 @@ const RollUp2 = () => {
   useEffect(() => { 
     fetchDataList()
     fetchRoomList()
-    makePoints()
     makeTimes()
-  }, [setSelectedDate])
+    makePoints()
+  }, [setLineData])
 
 const fetchDataList =  () => {
 RollUpDataService.get(selectedDate,selectedRoom)
@@ -44,9 +44,11 @@ const makePoints = () => {
 var xz = []
 var i;
 for (i = 0; i < lineData.length; i++){
-  var xData = roundToNearestMinutes(parseISO(lineData[i]['time']),{ nearestTo: 15 })
-  var xsData = format(xData, 'HH:mm')
-  xz.push({x: xsData ,y:parseInt(lineData[i]['runningTotal'])})
+  // var xData = roundToNearestMinutes(parseISO(lineData[i]['time']),{ nearestTo: 15 })
+  console.log(lineData[i]['time'])
+  var xData = lineData[i]['time']
+  // var xsData = format(xData, 'HH:mm')
+  xz.push({x: xData ,y:parseInt(lineData[i]['runningTotal'])})
 }
 setXAxis(xz)
 }
@@ -62,8 +64,9 @@ for(var j = 0; j < 4; j++){
   }
   var formattedDate = selectedDate.toISOString().split('T')[0]
   
-  var fTime = (formattedDate + 'T' + time + ':000Z')
-  times.push(time);
+  var fTime = (formattedDate + 'T' + time + ':00.000Z')
+  console.log(fTime)
+  times.push(fTime);
 }
 }
 setTimeList(times)
@@ -72,8 +75,9 @@ setTimeList(times)
 
 const refreshData = () => {
 fetchDataList();
-makePoints();
 makeTimes();
+makePoints();
+
 };
 
 return (
@@ -114,6 +118,7 @@ return (
     },
       elements: {
         line: {
+          tension: 10,
           stepped: true,
           backgroundColor: 'red',
           borderColor: 'red',
@@ -125,19 +130,46 @@ return (
           
         },
         x: {
-          // type: '', 
-          // time: 
-          // {
-          //    unit: 'hour',
-          //   displayFormats: {
-          // //     millisecond: 'HH:mm:ss.SSS',
-          // //     second: 'HH:mm:ss',
-          // //     minute: 'HH:mm',
-          //     hour: 'HH:mm',
-          // //     day: 'dd:HH:mm'
-          // }
-          // }
-        }
+          ticks: {
+            source: 'auto'
+          },
+          type: 'time', 
+          time: 
+          {
+             unit: 'minute',
+            displayFormats: {
+              millisecond: 'HH:mm:ss.SSS',
+              second: 'HH:mm:ss',
+              minute: 'HH:mm',
+              hour: 'HH:mm',
+              day: 'dd:HH:mm'
+          },
+          stepSize: 15
+          },
+          title: {
+            display: 'true',
+            text: 'Time of Day',
+            font: {
+              size: 20,
+              style: 'bold'
+            },
+            padding: 15
+          },
+        },
+        y:{
+          ticks: {
+            source: 'auto'
+          },
+          title: {
+            display: 'true',
+            text: 'Minutes Occupied',
+            font: {
+              size: 20,
+              style: 'bold'
+            },
+            padding: 15
+          },
+        },
     }
   }
   }
